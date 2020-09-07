@@ -17,7 +17,7 @@ const MyBooks = () => {
       text: "Delete",
       onClick: async ({ target }) => {
         const { _id } = savedBooks[target.id];
-        const URL = `https://guarded-tor-11800.herokuapp.com/api/books/${_id}`;
+        const URL = `https://secret-hamlet-54274.herokuapp.com/api/books/${_id}`;
         const { data } = await axios.delete(URL);
         setSavedBooks(data.results);
       },
@@ -28,7 +28,7 @@ const MyBooks = () => {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const URL = "https://guarded-tor-11800.herokuapp.com/api/save";
+        const URL = "https://secret-hamlet-54274.herokuapp.com/api/save";
         setLoading(true);
         setSavedBooks([]);
 

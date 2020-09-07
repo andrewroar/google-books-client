@@ -18,7 +18,7 @@ const Home = () => {
     {
       text: "Save",
       onClick: async ({ target }) => {
-        const URL = "https://guarded-tor-11800.herokuapp.com/api/save";
+        const URL = "https://secret-hamlet-54274.herokuapp.com/api/save";
         const payload = books[target.id];
         await axios.post(URL, payload);
       },
@@ -30,7 +30,7 @@ const Home = () => {
     try {
       event.preventDefault();
 
-      const URL = "https://guarded-tor-11800.herokuapp.com/api/books";
+      const URL = "https://secret-hamlet-54274.herokuapp.com/api/books";
 
       const payload = {
         searchTerm,
